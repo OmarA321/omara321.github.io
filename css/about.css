@@ -1,0 +1,518 @@
+/* =========================================================
+   About Page Styles (matches main.css palette & tone)
+   ========================================================= */
+
+/* ------------ Hero ------------ */
+.about-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 140px 0 100px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><g fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"><circle cx="70" cy="70" r="50"/><circle cx="20" cy="20" r="12"/></g></svg>');
+    animation: backgroundMove 25s linear infinite;
+  }
+  
+  .about-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about-hero .hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  
+  .about-hero .hero-description {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    opacity: 0.95;
+    margin: 0 auto 2.2rem;
+    line-height: 1.6;
+    max-width: 720px;
+  }
+  
+  /* ------------ Personal Introduction ------------ */
+  .personal-intro {
+    padding: 5.5rem 0;
+background-color: transparent;  }
+  
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .intro-text {
+    max-width: 600px;
+  }
+  
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+  
+  .intro-paragraphs p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro-paragraphs p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-large);
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-info p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .profile-stats .stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: var(--background-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .profile-stats .stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+  }
+  
+  .profile-stats .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  /* ------------ Values Section ------------ */
+  .values-section {
+    padding: 5.5rem 0;
+background-color: transparent;  }
+  
+  .values-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(102,126,234,0.35);
+  }
+  
+  .value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .value-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  /* ------------ Education Section ------------ */
+  .education-section {
+    padding: 5.5rem 0;
+background-color: transparent;  }
+  
+  .education-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .education-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(118,75,162,0.35);
+  }
+  
+  .education-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .education-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 10px 16px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+    font-size: 1.5rem;
+  }
+  
+  .degree-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .specialization {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .school-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  
+  .school-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .additional-cert {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    padding: 1rem;
+    background: var(--background-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+  }
+  
+  /* ------------ Interests Section ------------ */
+  .interests-section {
+    padding: 5.5rem 0;
+background-color: transparent;  }
+  
+  .interests-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .interest-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .interest-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(102,126,234,0.35);
+  }
+  
+  .interest-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .interest-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  .interest-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  /* ------------ Fun Facts Section ------------ */
+  .fun-facts {
+    padding: 5.5rem 0;
+background-color: transparent;  }
+  
+  .fun-facts .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Force 4 equal columns */
+    gap: 2rem;
+    max-width: 1000px; /* Increase max-width to accommodate 4 items */
+    margin: 0 auto;
+  }
+  
+  .fact-item {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .fact-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .fact-number {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .fact-item p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  /* ------------ Responsive Design ------------ */
+  @media (max-width: 991px) {
+    .intro-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .intro-text {
+      order: 2;
+      max-width: none;
+      text-align: center;
+    }
+  
+    .intro-visual {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .interests-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .education-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .facts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .profile-card {
+      padding: 1.5rem;
+    }
+  
+    .intro-paragraphs p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .facts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .profile-stats {
+      grid-template-columns: 1fr;
+    }
+  
+    .school-info {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ------------ Dark Theme Polish ------------ */
+  .dark-theme .value-card,
+  .dark-theme .interest-card,
+  .dark-theme .fact-item,
+  .dark-theme .education-card {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.18);
+  }
+  
+  .dark-theme .additional-cert,
+  .dark-theme .profile-stats .stat-item {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+
+/* Background enhancements */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    background-image: 
+      radial-gradient(circle at 25% 25%, var(--primary-color) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, var(--secondary-color) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    animation: backgroundFloat 20s ease-in-out infinite;
+  }
+  
+  .dark-theme body::before {
+    opacity: 0.05;
+  }
+  
+  @keyframes backgroundFloat {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(10px, -10px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-5px, 10px) rotate(-0.5deg);
+    }
+    75% {
+      transform: translate(-10px, -5px) rotate(1.5deg);
+    }
+  }
+  
+  /* Additional subtle gradient overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+      radial-gradient(ellipse at top, transparent 0%, var(--background-primary) 70%),
+      radial-gradient(ellipse at bottom, transparent 0%, var(--background-secondary) 70%);
+    opacity: 0.1;
+  }
