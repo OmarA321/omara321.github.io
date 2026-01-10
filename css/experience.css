@@ -475,6 +475,51 @@ background-color: transparent;}
   margin: .45rem 0 .9rem;
 }
 
+.capstone-callout {
+  position: relative;
+  border-radius: 14px;
+  padding: .85rem 1.1rem .85rem 2.6rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.22), rgba(255, 165, 0, 0.16));
+  border: 1px solid rgba(218, 165, 32, 0.6);
+  box-shadow: 0 10px 22px rgba(160, 120, 0, 0.18), inset 0 0 0 1px rgba(255, 236, 179, 0.35);
+  margin: 0 0 .9rem;
+  overflow: hidden;
+}
+
+.capstone-callout-text {
+  margin: 0;
+  color: #7a5600;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.capstone-callout::before {
+  content: "\f091";
+  position: absolute;
+  left: .95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: #b8860b;
+}
+
+.capstone-callout::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.35) 35%, transparent 70%);
+  transform: translateX(-100%);
+  animation: capstoneShimmer 3.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes capstoneShimmer {
+  0%, 65% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .project-highlights {
   display: grid;
 grid-template-columns: 1fr;  gap: .6rem .9rem;

@@ -418,6 +418,7 @@
     applyHash();
     renderProjects();
     activateReveal();
+    initSlideshows();
 
     // Accessibility: keyboard focus adds .in to reveals
     document.addEventListener("focusin", (e) => {
@@ -428,40 +429,39 @@
 
 
   // Image slideshow functionality
-document.querySelectorAll('.project-slideshow').forEach(slideshow => {
-    let currentSlide = 0;
-    const slides = slideshow.querySelectorAll('.slide');
-    const dots = slideshow.querySelectorAll('.nav-dot');
-    const prevBtn = slideshow.querySelector('.slide-prev');
-    const nextBtn = slideshow.querySelector('.slide-next');
-    
-    function showSlide(index) {
+  function initSlideshows() {
+    document.querySelectorAll('.project-slideshow').forEach(slideshow => {
+      if (slideshow.dataset.slideshowInit === "true") return;
+      slideshow.dataset.slideshowInit = "true";
+
+      let currentSlide = 0;
+      const slides = slideshow.querySelectorAll('.slide');
+      const dots = slideshow.querySelectorAll('.nav-dot');
+
+      if (!slides.length) return;
+
+      function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
+        if (dots.length) dots.forEach(dot => dot.classList.remove('active'));
+
         slides[index].classList.add('active');
-        dots[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
         currentSlide = index;
-    }
-    
-    function nextSlide() {
+      }
+
+      function nextSlide() {
         const next = (currentSlide + 1) % slides.length;
         showSlide(next);
-    }
-    
-    function prevSlide() {
-        const prev = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prev);
-    }
-    
+      }
 
-    dots.forEach((dot, index) => {
+      dots.forEach((dot, index) => {
         dot.addEventListener('click', () => showSlide(index));
+      });
+
+      showSlide(0);
+      setInterval(nextSlide, 2500);
     });
-    
-    // Auto-advance slides every 4 seconds
-    setInterval(nextSlide, 2500);
-});
+  }
 
   // Kick off
   init();
